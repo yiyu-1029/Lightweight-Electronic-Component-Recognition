@@ -1,0 +1,23 @@
+dataset:
+  classes: 36
+  image_size: 224
+
+
+training:
+  batch_size: 8
+  optimizer: AdamW
+  lr: 0.001
+  epochs: 50
+
+
+pruning:
+  method: iterative_structured
+  ratio:
+    - 0.3
+    - 0.4
+    - 0.45
+    - 0.5
+
+
+quantization:
+  method: dynamic_int8
